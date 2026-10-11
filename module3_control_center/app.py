@@ -6,7 +6,8 @@ from module1_core_engine.chemical_validator import validate_chemical_smiles
 from module3_control_center.molecular_viewer import render_2d_molecule_svg
 from module3_control_center.nano_analytics import render_nanomaterials_dashboard
 
-st.set_page_config(page_title="ChemData Scientific Platform", page_layout="wide", page_icon="🔬")
+st.set_page_config(page_title="ChemData Scientific Platform", layout="wide", page_icon="🔬")
+
 
 st.title("ChemData Scientific Control Center")
 st.caption("A production-grade scientific analytics and validation platform for browsing chemistry records, rendering 2D/3D structures, and evaluating Nanoparticle DLS distributions with DLVO colloidal stability.")
