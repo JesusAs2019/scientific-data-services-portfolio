@@ -79,7 +79,10 @@ Regulated R&D: ISO/GLP-compliant data lineage and batch-release reporting.
 **Jean Pierre Assiana** — MSc Chemistry · Data Engineer & Regulated AI Solutions Architect
 
 **Agency Portal**: https://chemdataai.com
+
 Live App 1 (Capital Markets & REMIT): chemdata-ai-platform.streamlit.app
+
 Live App 2 (Molecular & Nanomaterials): technical-analytical-project.streamlit.app
+
 **GitHub**: @JesusAs2019
 
