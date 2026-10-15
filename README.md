@@ -1,51 +1,62 @@
-# ChemData Scientific Data Platform — Enterprise Cheminformatics & Nanomaterials Suite
+# ChemData Scientific Data Platform
 
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![RDKit](https://img.shields.io/badge/RDKit-2D%2F3D%20Cheminformatics-green.svg)](https://www.rdkit.org/)
-[![Pydantic v2](https://img.shields.io/badge/Pydantic-v2.0-red.svg)](https://docs.pydantic.dev/)
-[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM%20Vault-orange.svg)](https://www.sqlalchemy.org/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://technical-analytical-project.streamlit.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+## Enterprise Cheminformatics, Nanomaterials Suite & Scientific Data Accelerator
 
-> **A production-grade, 3-tier scientific data architecture engineered for pharmaceutical, biotechnology, and advanced nanomaterials R&D workflows.**
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
+[![RDKit](https://img.shields.io/badge/Cheminformatics-RDKit-green.svg)](https://www.rdkit.org/)
+[![Pydantic v2](https://img.shields.io/badge/Data%20Contracts-Pydantic%20v2-orange.svg)](https://docs.pydantic.dev/)
+[![AIMNet2 Enabled](https://img.shields.io/badge/AI%20Potential-AIMNet2-success.svg)](https://pubs.rsc.org/)
+[![SQLAlchemy](https://img.shields.io/badge/ORM-SQLAlchemy%202.0-red.svg)](https://www.sqlalchemy.org/)
+[![Streamlit App](https://img.shields.io/badge/Streamlit%20App-Live-FF4B4B.svg)](https://technical-analytical-project.streamlit.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
----
-
-## 🏛️ 3-Tier Enterprise Architecture
-
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐ │ CHEMDATA SCIENTIFIC DATA PLATFORM │ ├─────────────────────────────────────────────────────────────────────────────────────────────────┤ │ │ │ [TIER 1: CORE INGESTION & VALIDATION ENGINE] │ │ ├── Molecular SMILES & Organic Compounds Validator (Pydantic, RDKit Sanitization) │ │ ├── Nanoparticles & Colloidal Characterization (DLS Size, PDI, Zeta Potential, Core-Shell) │ │ └── Automated Physical Bounds & Quality Anomaly Scoring │ │ │ │ │ ▼ │ │ [TIER 2: RELATIONAL VAULT & PERSISTENCE LAYER] │ │ ├── Normalized Multi-Table SQLite / PostgreSQL Storage (SQLAlchemy ORM) │ │ ├── Batch Lineage Tracking, Synthesis Records & Metadata Versioning │ │ └── High-Performance Indexed Querying for High-Throughput Screening (HTS) │ │ │ │ │ ▼ │ │ [TIER 3: INTERACTIVE CONTROL CENTER & ANALYTICS UI] │ │ ├── Interactive 2D Structure Drawing (rdMolDraw2D with vector SVG rendering) │ │ ├── WebGL Interactive 3D Conformer Coordinates (py3Dmol / stmol) │ │ ├── Dynamic Light Scattering (DLS) Size Distribution Generator (Log-Normal Curves) │ │ └── DLVO Colloidal Stability Risk Evaluator & Formulation Vault │ │ │ └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+> **A production-grade, 4-tier scientific data architecture engineered for pharmaceutical, biotechnology, advanced nanomaterials, and high-throughput computational chemistry R&D workflows.**
 
 ---
 
-## 🚀 Key Modules & Capabilities
+## 🏛️ 4-Tier Enterprise Architecture
 
-### 1. Tier 1 — Core Ingestion & Validation Engine (`module1_core_engine`)
+┌────────────────────────────────────────────────────────────────────────────────────────┐ │ TIER 4: SCIENTIFIC DATA ACCELERATOR (module4_scientific_accelerator) │ │ - 4-State Simulation Readiness Triage (READY, WARNING, REMEDIATION, REJECTED) │ │ - Task-Aware Execution Lanes (AIMNet2 Fast Inference, PyTorch Workflows, ASE Adapters)│ │ - Zero-Trust ALCOA+ Audit Vault with SHA-256 Provenance Hashes & OOD Uncertainty Flags│ └───────────────────────────────────────────┬────────────────────────────────────────────┘ │ ┌───────────────────────────────────────────▼────────────────────────────────────────────┐ │ TIER 3: INTERACTIVE CONTROL CENTER & ANALYTICS UI (module3_control_center) │ │ - Interactive 2D Structure Drawing (rdMolDraw2D with vector SVG rendering) │ │ - WebGL Interactive 3D Conformer Coordinates (py3Dmol / stmol) │ │ - Dynamic Light Scattering (DLS) Size Distribution Generator (Log-Normal Curves) │ │ - DLVO Colloidal Stability Risk Evaluator & Formulation Vault │ └───────────────────────────────────────────┬────────────────────────────────────────────┘ │ ┌───────────────────────────────────────────▼────────────────────────────────────────────┐ │ TIER 2: RELATIONAL VAULT & PERSISTENCE LAYER (module2_relational_vault) │ │ - Normalized Multi-Table SQLite / PostgreSQL Storage (SQLAlchemy ORM) │ │ - Batch Lineage Tracking, Synthesis Records & Metadata Versioning │ │ - High-Performance Indexed Querying for High-Throughput Screening (HTS) │ └───────────────────────────────────────────┬────────────────────────────────────────────┘ │ ┌───────────────────────────────────────────▼────────────────────────────────────────────┐ │ TIER 1: CORE INGESTION & VALIDATION ENGINE (module1_core_engine) │ │ - Molecular SMILES & Organic Compounds Validator (Pydantic, RDKit Sanitization) │ │ - Nanoparticles & Colloidal Characterization (DLS Size, PDI, Zeta Potential) │ │ - Automated Physical Bounds & Quality Anomaly Scoring (pH, Temp, Ionic Strength) │ └────────────────────────────────────────────────────────────────────────────────────────┘
 
-* **SMILES Parsing & Structure Verification:** Automated chemical validity verification using RDKit's Kekulization and aromaticity perception.
+---
 
-* **Nanomaterial Characterization:** Strict electrokinetic and size validation for:
-  * Hydrodynamic Diameter ($d_H \in [1.0, 2000.0] \text{ nm}$)
+---
+
+## 📦 Key Modules & Capabilities
+
+### 1. Tier 1: Core Ingestion & Validation Engine (`module1_core_engine`)
+
+* **SMILES Parsing & Structure Verification:** Chemical validity verification using RDKit's Kekulization, valence rules, and aromaticity perception.
+* **Nanomaterial Characterization:** Strict electrokinetic and size validation:
+  * Hydrodynamic Diameter ($d_H \in [1.0, 2000.0]\text{ nm}$)
   * Polydispersity Index ($\text{PDI} \le 0.2$ for monodisperse formulations)
-  * Zeta Potential ($\zeta \in [-120.0, +120.0] \text{ mV}$) with DLVO colloidal aggregation risk scoring.
-* **Pharma & Bio bounds:** Automated pH, temperature, and ionic strength verification.
+  * Zeta Potential ($\zeta \in [-120.0, +120.0]\text{ mV}$) with DLVO colloidal aggregation risk scoring.
+* **Biophysical Bounds:** Automated pH, temperature, and ionic strength verification.
 
-### 2. Tier 2 — Relational Vault (`module2_relational_vault`)
+### 2. Tier 2: Relational Vault (`module2_relational_vault`)
 
-* **Transactional Multi-Table Schema:** Robust SQLAlchemy ORM database models mapping synthesis batches, physical measurements, stability scores, and audit timestamps.
+* **Transactional Multi-Table Schema:** SQLAlchemy ORM database models mapping synthesis batches, physical measurements, stability scores, and audit timestamps.
 
-* **Export-Ready Data Pipelines:** Seamless serialization to CSV, Parquet, and structured JSON-LD schemas.
+* **Export-Ready Data Pipelines:** Serialization to CSV, Parquet, and structured JSON-LD schemas.
 
-### 3. Tier 3 — Control Center UI (`module3_control_center`)
+### 3. **Tier 3: Control Center UI** (`module3_control_center`)
 
 * **Interactive 2D/3D Molecular Visualization:** High-performance ball-and-stick WebGL conformer rendering with real-time coordinate manipulation.
-* **Nanoparticles & Advanced Materials Dashboard:**
-  * Real-time Dynamic Light Scattering (DLS) Gaussian/Log-Normal intensity curve generator.
-  * Electrostatic stability classification (Highly Stable vs. Rapid Aggregation thresholds).
-  * Formulation Vault for batch comparison across LNPs, Gold nanospheres, and Quantum Dots.
+* **Nanoparticles & Advanced Materials Dashboard:** Real-time Dynamic Light Scattering (DLS) Gaussian/Log-Normal intensity curve generator and electrostatic stability classification (Highly Stable vs. Rapid Aggregation).
+
+### 4. Tier 4: Scientific Data Accelerator (`module4_scientific_accelerator`) ⭐ *New*
+
+* **Validation-First Simulation Triage:** 4-state classification gate ensuring zero corrupted molecules consume expensive GPU/DFT compute:
+  * 🟢 `READY`: Dispatched to AIMNet2 Fast Inference Lane.
+  * 🟡 `READY_WITH_WARNINGS`: Open-shell radicals routed to spin-polarized ASE adapters.
+  * 🟠 `REQUIRES_REMEDIATION`: Heavy transition metals (Pt, etc.) flagged for DFT fallback.
+  * 🔴 `REJECTED`: Blocked before execution due to syntax/valence contraventions.
+* **High-Speed Neural Potentials:** AIMNet2 neural execution for single-point energies, atomic forces, and dipole moments with $<10\text{ ms}$ latency.
+* **Zero-Trust ALCOA+ Audit Vault:** Cryptographic SHA-256 provenance hashes generated for every approved calculation to guarantee auditability and regulatory defensibility.
 
 ---
 
-## 📦 Quickstart & Installation
+## ⚡ Quickstart & Local Verification
 
 ### 1. Clone the repository
 
@@ -54,35 +65,96 @@ git clone https://github.com/JesusAs2019/scientific-data-services-portfolio.git
 cd scientific-data-services-portfolio
 ```
 
-### 2.  **Create virtual environment & install dependencies**
+### 2. **Create virtual environment & install dependencies**
 
+```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\Activate.ps1
+```
+
+#### **On Windows (PowerShell)**
+
+```bash
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.venv\Scripts\Activate.ps1
+```
+
+#### **On macOS / Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+#### **Install dependencies**
+
+```bash
 pip install -r requirements.txt
+pip install pytest pydantic
+```
 
-### 3. **Launch Interactive Control Center**
+### 3. **Run Automated Unit Tests (100% Passing)**
 
-streamlit run module3_control_center/app.py
+#### Windows PowerShell
 
-### 4. **Run Pytest Suite**
+```bash
+$env:PYTHONPATH="."
+python -m pytest -v tests/test_accelerator.py
+```
 
-pytest -v
+#### macOS / Linux
 
-## 🔬 **Target Applications**
+```bash
+PYTHONPATH=. pytest -v tests/test_accelerator.py
+```
 
-Pharma & Biotech: Targeted Lipid Nanoparticle (LNP) mRNA drug delivery formulations.
-Energy & Catalysis: Nanocatalyst surface charge profiling and battery electrode material validation.
-Regulated R&D: ISO/GLP-compliant data lineage and batch-release reporting.
+### 4. **Run the Scientific Data Accelerator Demo**
+
+#### Run the 7-molecule batch triage demonstration
+
+```bash
+python -m module4_scientific_accelerator.run_accelerator
+```
+
+### 5. **Launch the Interactive Streamlit Control Center**
+
+```bash
+Copystreamlit run module3_control_center/app.py
+```
+
+## 🧪 **Accelerator Triage Verification Matrix**
+
+```bash
+
+| Source ID | Compound / Test Case | Formula | Validation Status | Assigned Execution Lane | Potential Energy |
+|:---|:---|:---|:---:|:---|:---:|
+| **SMI-001** | Aspirin | $\text{C}_9\text{H}_8\text{O}_4$ | 🟢 `READY` | AIMNet2 Fast Inference | -616.14 eV |
+| **SMI-002** | Caffeine | $\text{C}_8\text{H}_{10}\text{N}_4\text{O}_2$ | 🟢 `READY` | AIMNet2 Fast Inference | -664.13 eV |
+| **SMI-003** | Ethanol | $\text{C}_2\text{H}_6\text{O}$ | 🟢 `READY` | PyTorch Neural Workflow | -157.56 eV |
+| **SMI-004** | Ibuprofen | $\text{C}_{13}\text{H}_{18}\text{O}_2$ | 🟢 `READY` | AIMNet2 Fast Inference | -705.48 eV |
+| **SMI-005** | Benzene Radical Cation | $\text{C}_6\text{H}_6^{\bullet+}$ | 🟡 `READY_WITH_WARNINGS` | Advanced Adapters (ASE) | -267.15 eV |
+| **SMI-006** | Cisplatin (Coordination Complex) | $\text{Cl}_2\text{H}_6\text{N}_2\text{Pt}$ | 🟠 `REQUIRES_REMEDIATION` | Advanced Adapters (PySisyphus) | -1026.17 eV |
+| **SMI-007** | Corrupted SMILES (Negative Control) | `INVALID` | 🔴 `REJECTED` | `rejected_lane` | **Blocked (0 ms)** |
+​
+```
+
+## 🎯 **Target Applications & Commercial Offerings**
+
+Pharma & Biotech Discovery: High-throughput virtual screening, lipid nanoparticle (LNP) formulation triage, and pre-DFT candidate validation.
+Energy, Materials & Catalysis: Nanocatalyst surface charge profiling, battery electrode material validation, and transition-state reaction pathway mapping.
+Commercial Engagements: Available as the Scientific Edition of the ChemData AI Data Accelerator (from £9,500).
 
 ## 👨‍💻 **Author & Engineering Leadership**
 
-**Jean Pierre Assiana** — MSc Chemistry · Data Engineer & Regulated AI Solutions Architect
+Jean Pierre Assiana, MSc Applied Chemistry
+Principal Informatics Engineer & Agency Director, ChemData AI Solutions
 
 **Agency Portal**: https://chemdataai.com
 
-Live App 1 (Capital Markets & REMIT): chemdata-ai-platform.streamlit.app
+**Scientific Data Accelerator**: https://chemdataai.com/scientific-data-accelerator
 
-Live App 2 (Molecular & Nanomaterials): technical-analytical-project.streamlit.app
+**Live Streamlit Suite**: technical-analytical-project.streamlit.app
+GitHub Profile: @JesusAs2019
 
-**GitHub**: @JesusAs2019
+## 📜 **License**
 
+Distributed under the MIT License. Developed and maintained by ChemData AI Solutions.
