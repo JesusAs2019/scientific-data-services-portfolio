@@ -123,18 +123,15 @@ Copystreamlit run module3_control_center/app.py
 
 ## 🧪 **Accelerator Triage Verification Matrix**
 
-```bash
-
 | Source ID | Compound / Test Case | Formula | Validation Status | Assigned Execution Lane | Potential Energy |
 | :--- | :--- | :--- | :---: | :--- | :---: |
-| **SMI-001** | Aspirin | C<sub>9</sub>H<sub>8</sub>O<sub>4</sub> | 🟢 `READY` | AIMNet2 Fast Inference | -616.14 eV |
-| **SMI-002** | Caffeine | C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> | 🟢 `READY` | AIMNet2 Fast Inference | -664.13 eV |
-| **SMI-003** | Ethanol | C<sub>2</sub>H<sub>6</sub>O | 🟢 `READY` | PyTorch Neural Workflow | -157.56 eV |
-| **SMI-004** | Ibuprofen | C<sub>13</sub>H<sub>18</sub>O<sub>2</sub> | 🟢 `READY` | AIMNet2 Fast Inference | -705.48 eV |
-| **SMI-005** | Benzene Radical Cation | C<sub>6</sub>H<sub>6</sub><sup>•+</sup> | 🟡 `READY_WITH_WARNINGS` | Advanced Adapters (ASE) | -267.15 eV |
-| **SMI-006** | Cisplatin (Coordination Complex) | Cl<sub>2</sub>H<sub>6</sub>N<sub>2</sub>Pt | 🟠 `REQUIRES_REMEDIATION` | Advanced Adapters (PySisyphus) | -1026.17 eV |
+| **SMI-001** | Aspirin | C₉H₈O₄ | 🟢 `READY` | AIMNet2 Fast Inference | -616.14 eV |
+| **SMI-002** | Caffeine | C₈H₁₀N₄O₂ | 🟢 `READY` | AIMNet2 Fast Inference | -664.13 eV |
+| **SMI-003** | Ethanol | C₂H₆O | 🟢 `READY` | PyTorch Neural Workflow | -157.56 eV |
+| **SMI-004** | Ibuprofen | C₁₃H₁₈O₂ | 🟢 `READY` | AIMNet2 Fast Inference | -705.48 eV |
+| **SMI-005** | Benzene Radical Cation | C₆H₆•⁺ | 🟡 `READY_WITH_WARNINGS` | Advanced Adapters (ASE) | -267.15 eV |
+| **SMI-006** | Cisplatin (Coordination Complex) | Cl₂H₆N₂Pt | 🟠 `REQUIRES_REMEDIATION` | Advanced Adapters (PySisyphus) | -1026.17 eV |
 | **SMI-007** | Corrupted SMILES (Negative Control) | `INVALID` | 🔴 `REJECTED` | `rejected_lane` | **Blocked (0 ms)** |
-```
 
 ## 🎯 **Target Applications & Commercial Offerings**
 
